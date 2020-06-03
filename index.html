@@ -1,0 +1,54 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        
+        <title>Music Player</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="details">
+                <h3 id="track-count">Playing a of b</h3>  <!--       a is song no. b in total tracks -->
+                <img id="song-img" src="images/rio cover.jfif" alt="music image">
+                <h1 id="track-title" style="margin-top: 5px;">Track Name</h1>
+                <h2 id="track-artist" style="margin-top: 5px;">Track Artist</h2>
+            </div>
+
+            <div class="slider-container">
+                <div id="current-time">00:00</div> 
+                <input type="range" id="time-slider" min="0" max="100">         
+                <div id="track-duration">00:00</div>
+            </div>
+
+            <div class="buttons">
+                <div class="prev-track" onclick="prevTrack()"> 
+                    <i class="fa fa-step-backward fa-2x"></i> 
+                </div> 
+                <div class="playpause-track" onclick="playpauseTrack()"> 
+                    <i class="fas fa-play fa-5x"></i>
+                </div> 
+                <div class="next-track" onclick="nextTrack()"> 
+                    <i class="fa fa-step-forward fa-2x"></i> 
+                </div> 
+            </div>
+
+            <div class="volume-control">     
+                <i class="fas fa-volume-down"></i>
+                <input type="range" id="volume-slider" value="70" min="0" max="100" onchange="setVolume()"> 
+                <i class="fas fa-volume-up"></i>   
+            </div>
+          
+            <!-- <div class=bottom >
+                <img class="bottom-img" src="radio.svg">
+            </div> -->
+
+
+        </div>
+        <!-- Load the main script for the player -->
+  <script src="index.js"></script>
+    </body>
+
+</html>

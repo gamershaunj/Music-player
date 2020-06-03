@@ -1,0 +1,122 @@
+body{
+   
+    background-color: #32DF9E; 
+    color:black;
+    font-weight: 400;
+    font-family: sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    margin-bottom: 0;
+    font-size: 3rem;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+}
+
+#song-img{
+    border-radius: 30%;
+    height: 280px;
+    width: 280px;
+    margin: 0 20px 0 20px;
+}
+.slider-container{
+    display: flex;
+    width: 30%;
+}
+
+#current-time{
+    padding: 0 10px 0 10px;
+    width: 15%;
+    text-align: center;
+}
+
+#track-duration{
+    padding: 0 10px 0 10px;
+    width: 15%;
+    text-align: center;
+}
+
+#time-slider,#volume-slider{   
+  -webkit-appearance: none;
+  width: 70%;
+  margin-top: 5px;
+  height: 7px;
+  /* background: repeating-linear-gradient(-45deg, red, red 5px, blue 5px, blue 10px); */
+  border-radius: 5%;   
+  background: black;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+#time-slider:hover,#volume-slider:hover{
+    opacity: 1.0;
+}
+
+#time-slider::-webkit-slider-thumb, #volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%; 
+    background: rgb(219, 206, 206);
+    cursor: pointer;
+  }
+
+  .buttons{
+      display: flex;
+      margin-top: 20px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 30%;
+  }
+
+.prev-track{
+    width: 25%;
+    text-align: right;
+    opacity: .8;
+    transition: opacity .4;
+}
+.next-track{
+    width: 25%;
+    text-align: left;
+    opacity: .8;
+    transition: opacity .4;
+}
+.playpause-track{
+    width: 45%;
+    text-align: center;
+    opacity: .8;
+    transition: opacity .4;
+}  
+
+.prev-track:hover,.next-track:hover,.playpause-track:hover{
+    opacity: 1.0;
+}
+
+.volume-control{
+    width: 15%;
+    margin-top: 15px;
+}
+.fa-volume-down,.fa-volume-up{
+    margin: 0 6px 2px 6px;
+}
+
+.bottom-img{
+    height: 100px;
+    width: 100px;
+    margin-top: 15px;
+}
